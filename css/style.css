@@ -1,0 +1,61 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2936e8+0,7218bc+100 */
+    background: #2936e8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #2936e8 0%, #7218bc 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #2936e8 0%,#7218bc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #2936e8 0%,#7218bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2936e8', endColorstr='#7218bc',GradientType=0 ); /* IE6-9 */
+}
+
+#content {
+  padding: 1em;
+
+  border-radius: 5px;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2, h3, h4, h5 {
+  color: grey;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+
+  padding: 0;
+  width: 100%;
+
+  margin-bottom: 0;
+}
+
+ul li {
+  font-size: 16pt;
+  position: relative;
+
+  width: 33%;
+  display: inline;
+}
