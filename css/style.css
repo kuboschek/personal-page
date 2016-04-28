@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 #container {
     position: absolute;
 
@@ -69,7 +73,12 @@ ul {
 ul li {
   font-size: 16pt;
   position: relative;
+  padding-right: 1em;
 
   width: 33%;
   display: inline;
+}
+
+ul li:last-child {
+  padding-right: 0;
 }
