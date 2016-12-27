@@ -36,14 +36,14 @@ html, body {
 }
 
 
-@media(max-device-width:767px) {
+@media(max-device-width:424px) {
   #content {
     width: 100%;
     border-radius: 0px;
   }
 }
 
-@media(min-device-width:768px) {
+@media(min-device-width:425px) {
   #content {
     border-radius: 5px;
   }
