@@ -1,0 +1,62 @@
+html {
+    font-family: Helvetica Neue, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1.heading {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+
+div.message-wrap
+
+div.message-wrap img {
+    float: left;
+    display: inline;
+}
+
+div.message {
+    font-size: 14px;
+
+    border-radius: 18.2px;
+    max-width: 85%;
+    padding: 6px 12px;
+    margin-top: 1px;
+    clear: both;
+}
+
+
+div.message.grey {
+    background-color:#f1f0f0;
+
+    margin-right: 2em;
+    float: left;
+}
+
+div.message.blue {
+    background-color: #0084ff;
+    color: white;
+
+    margin-left: 2em;
+    float: right;
+}
+
+div.message.blue + div.message.grey {
+    margin-top: 1em;
+}
+
+div.message.grey + div.message.blue {
+    margin-top: 1em;
+}
+
+#message-container {
+    position: absolute;
+    margin: 0;
+    padding: 1em;
+    width: calc(100% - 2em);
+}
