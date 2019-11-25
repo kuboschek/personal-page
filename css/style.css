@@ -23,9 +23,10 @@ html, body {
     /* background: -webkit-linear-gradient(top,  #2936e8 0%,#7218bc 100%); */ /* Chrome10-25,Safari5.1-6 */
     /* background: linear-gradient(to bottom,  #2936e8 0%,#7218bc 100%); */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     /* background: #465461; */
-    background-image: linear-gradient(black, black), url("/assets/church.jpg");
-    background-size: cover;
-    background-blend-mode: saturation;
+    /* background-image: linear-gradient(black, black), url("/assets/church.jpg"); */
+    /* background-size: cover; */
+    /* background-blend-mode: saturation; */
+    background-image: url("/assets/church-bw-xs.jpg");
 }
 
 
