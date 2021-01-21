@@ -3,6 +3,18 @@ const START_TYPING = 'start_typing'
 const LEFT = 'l'
 const RIGHT = 'r'
 
+const WPM = 140
+const SPW = (60 / WPM)
+const MPS = 1000
+const RAND_TYPING_DELAY_FACTOR = 10
+
+function delayGenerator(text) {
+    var wordCount = text.split(" ").length
+    var typingSpeed = WPM + ((Math.random() - 0.5) * RAND_TYPING_DELAY_FACTOR)
+
+    return MPS * (SPW * wordCount)
+}
+
 
 const theScript = [
     {
@@ -74,6 +86,7 @@ const theScript = [
 var container = null
 
 function drawMsg(msg) {
+    hideTyping(msg)
     var newDiv = document.createElement('div')
     newDiv.className = 'message'
     newDiv.className += ' ' + (msg.side == LEFT ? 'grey' : 'blue')
@@ -81,9 +94,35 @@ function drawMsg(msg) {
     container.appendChild(newDiv)
 }
 
+function showTyping(msg) {
+    var newImg = document.createElement('img')
+    newImg.src = '/assets/typing-indicator.gif'
+
+    var newDiv = document.createElement('div')
+    newDiv.className += 'message typing ' + (msg.side == LEFT ? 'grey' : 'blue')
+    newDiv.appendChild(newImg)
+
+    container.appendChild(newDiv)
+}
+
+function hideTyping() {
+    var typingDivs = document.getElementsByClassName('typing')
+    
+    Array.from(typingDivs).forEach(function(element) {
+        element.parentNode.removeChild(element)
+    })
+}
+
 function processMsg(index) {
     if(index < theScript.length - 1) {
-        setTimeout(function() {processMsg(index + 1)}, theScript[index + 1].delay)
+        var next = theScript[index + 1]
+
+        if(next.action == SEND_MSG) {
+            var delayTime = delayGenerator(next.body)
+            setTimeout(function() {processMsg(index + 1)}, delayTime)
+        } else {
+            setTimeout(function() {processMsg(index + 1)}, theScript[index + 1].delay)
+        }
     } else {
         console.log("The End")
         return
@@ -94,6 +133,7 @@ function processMsg(index) {
     switch (msg.action) {
         case START_TYPING:
             console.log(msg.side + " starts typing")
+            showTyping(msg)
             break;
 
         case SEND_MSG:
