@@ -18,11 +18,7 @@ html, body {
     align-items: start;
 
     background-image: url("/assets/church-bw-xs.jpg");
-/*
-    background-color: rgb(53, 48, 83);
     background-size: cover;
-    background-blend-mode: saturation;
-*/
 }
 
 
