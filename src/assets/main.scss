@@ -1,0 +1,95 @@
+@import "./base.css";
+
+$large: 1200px;
+$medium: 800px;
+$small: 400px;
+
+$primary: rgb(195, 104, 255);
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em;
+
+  .box {
+    padding: .5rem 1rem;
+    margin-right: .5rem;
+    border-radius: 4rem;
+    text-align: center;
+
+    transition: all 0.5s ease;
+
+    &.active {
+      background: linear-gradient(to bottom right, darken($primary, 10%) 0%, darken($primary, 40%) 100%);
+      border: darken($primary, 20%) 1px solid;
+      color: white;
+    }
+    &:hover {
+      border: darken($primary, 20%) 1px solid;
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  max-width: $large;
+  margin: 0 auto;
+}
+
+.space {
+  padding: 1em;
+  margin: 1em;
+}
+
+.space-sm {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact {
+    vertical-align: middle;
+    display: flex;
+    justify-items: flex-end;
+    text-align: end;
+    line-height: 1.15rem;
+  }
+}
+
+.box {
+  border-radius: .75rem;
+  border: 1px solid #cccccc62;
+  box-shadow: 0 0 1.5rem #d8d8d880;
+
+  text-align: justify;
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+  }
+}
