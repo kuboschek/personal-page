@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import { useItemsStore } from "./stores/items";
 
-const {categories, setCategory} = useItemsStore();
+const itemStore = useItemsStore();
 
 </script>
 
@@ -22,7 +22,7 @@ const {categories, setCategory} = useItemsStore();
     </header>
 
     <nav class="space-sm">
-      <div class="box" @click="setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in categories">{{  category.label }}</div>
+      <div class="box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
     </nav>
 
     <RouterView />

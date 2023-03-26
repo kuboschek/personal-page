@@ -1,16 +1,38 @@
 <template>
   <div class="box space">
     <div class="head">
-      <h3>{{ itemData.title }}</h3>
+      <div>
+        <h3>{{ itemData.title }}</h3>
+        <h4>{{  itemData.subtitle }}</h4>
+      </div>
       <span>{{ durationString }}</span>
     </div>
-    <p v-html="micromark(itemData.description)"></p>
+    <p v-html="descriptionHtml"></p>
   </div>
 </template>
+
+<style scoped lang="scss">
+h3 {
+  margin-bottom: 0.25rem;
+}
+h4 {
+  margin-bottom: 1rem;
+}
+
+span {
+  white-space: nowrap;
+}
+
+small {
+  font-size: 0.75em;
+  padding-inline-start: 0.5em;
+}
+</style>
 
 <script setup lang="ts">
 import { computed, defineProps, type PropType } from "vue";
 import { micromark } from "micromark";
+import day from "dayjs";
 import type { Item } from "@/stores/items";
 
 const props = defineProps({
@@ -20,8 +42,18 @@ const props = defineProps({
   },
 });
 
+const descriptionHtml = computed(() => {
+  return micromark(props.itemData.description);
+});
+
 const durationString = computed(() => {
-  const { start, end } = props.itemData;
+  const start = props.itemData.start
+    ? day(props.itemData.start).format("MMM YYYY")
+    : null;
+  const end = props.itemData.end
+    ? day(props.itemData.end).format("MMM YYYY")
+    : null;
+
   if (start && end) {
     return `${start} - ${end}`;
   } else if (start) {
