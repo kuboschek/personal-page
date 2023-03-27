@@ -3,11 +3,11 @@
     <div class="head">
       <div>
         <h3>{{ itemData.title }}</h3>
-        <h4>{{  itemData.subtitle }}</h4>
+        <h4>{{ itemData.subtitle }}</h4>
       </div>
       <span>{{ durationString }}</span>
     </div>
-    <p v-html="descriptionHtml"></p>
+    <div class="content" v-html="descriptionHtml"></div>
   </div>
 </template>
 
@@ -15,6 +15,7 @@
 h3 {
   margin-bottom: 0.25rem;
 }
+
 h4 {
   margin-bottom: 1rem;
 }

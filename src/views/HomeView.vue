@@ -5,15 +5,26 @@ import { useItemsStore } from "@/stores/items";
 import { storeToRefs } from "pinia";
 
 const itemStore = useItemsStore();
+const buzzwords = new Set(["Vue", "TypeScript", "Angular", "CI/CD", "TDD", "OpenAPI", "Django", "Vue"]);
 </script>
 
 <template>
   <main>
-    <div class="timeline box space">
-      timeline
+    <div>
+      <div class="space-sm">
+        <h3>Things I Know</h3>
+      </div>
+      <div class="buzzwords">
+        <span class="box space-sm" v-for="buzzword in buzzwords" :key="buzzword">
+          {{ buzzword }}
+        </span>
+      </div>
     </div>
     <div class="items">
-      <LifeItemVue :item-data="item" v-for="item in itemStore.filteredItems"/>
+      <div class="space-sm">
+        <h3>Things I Did</h3>
+      </div>
+      <LifeItemVue :item-data="item" v-for="item in itemStore.filteredItems" :key="item.title"/>
     </div>
   </main>
 </template>
@@ -23,23 +34,26 @@ const itemStore = useItemsStore();
 
 main {
   margin: 1em;
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 1fr;
   gap: 1em;
 
   > .box {
     margin: 0;
   }
 
-  .timeline {
-    flex: 1;
+  .buzzwords {
+    display: flex;
+    align-items: stretch;
+    margin-left: 0;
+    padding-left: 0;
 
-    @media screen and (max-width: $medium) {
-      display: none;
+    .box {
+      display: block
     }
   }
 
   .items {
-    flex: 3;
 
     > .box {
       margin-left: 0;
