@@ -10,6 +10,10 @@ const buzzwordStore = useBuzzwordStore();
 </script>
 
 <template>
+  <nav class="space-sm no-print">
+    <div class="button box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
+  </nav>
+
   <main>
     <div>
       <div class="space-sm">
@@ -37,6 +41,10 @@ main {
   grid-template-columns: 30% 1fr;
   gap: 1em;
 
+  @media screen and (max-width: $medium) {
+    grid-template-columns: 1fr;
+  }
+
   > .box {
     margin: 0;
   }
@@ -56,7 +64,6 @@ main {
       flex-grow: 1;
       text-align: center;
     }
-
   }
 
   .items {

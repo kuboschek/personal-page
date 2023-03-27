@@ -22,10 +22,6 @@ const year = new Date().getFullYear();
       </div>
     </header>
 
-    <nav class="space-sm">
-      <div class="button box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
-    </nav>
-
     <RouterView />
 
     <footer>&copy; {{ year }} Leo Kuboschek &bull; CC-BY-SA 4.0 &bull; <a href="https://github.com/kuboschek/personal-page">Copy this page</a></footer>
