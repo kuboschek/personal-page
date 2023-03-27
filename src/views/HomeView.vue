@@ -10,10 +10,6 @@ const buzzwordStore = useBuzzwordStore();
 </script>
 
 <template>
-  <nav class="space-sm no-print">
-    <div class="button box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
-  </nav>
-
   <main>
     <div>
       <div class="space-sm">
@@ -27,6 +23,9 @@ const buzzwordStore = useBuzzwordStore();
       <div class="space-sm">
         <h3>Things I Do</h3>
       </div>
+      <nav class="no-print">
+        <div class="button box space-sm" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
+      </nav>
       <LifeItemVue :item-data="item" v-for="item in itemStore.filteredItems" :key="item.title"/>
     </div>
   </main>
@@ -51,6 +50,21 @@ main {
 
   > .box {
     margin: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .box {
+      box-shadow: none;
+    }
   }
 
   .buzzwords {
