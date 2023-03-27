@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 import { useItemsStore } from "./stores/items";
 
 const itemStore = useItemsStore();
+const year = new Date().getFullYear();
 
 </script>
 
@@ -26,8 +27,25 @@ const itemStore = useItemsStore();
     </nav>
 
     <RouterView />
+
+    <footer>&copy; {{ year }} Leo Kuboschek &bull; CC-BY-SA 4.0 &bull; <a href="https://github.com/kuboschek/personal-page">Copy this page</a></footer>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 1rem;
+    color: grey;
+
+    a {
+      color: grey;
+      text-decoration: initial;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 </style>
