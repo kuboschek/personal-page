@@ -56,7 +56,7 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    overflow-x: scroll;
+    flex-wrap: wrap;
 
     &::-webkit-scrollbar {
       display: none;
