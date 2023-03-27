@@ -31,7 +31,7 @@ small {
 </style>
 
 <script setup lang="ts">
-import { computed, defineProps, type PropType } from "vue";
+import { computed, type PropType } from "vue";
 import { micromark } from "micromark";
 import day from "dayjs";
 import type { Item } from "@/stores/items";
