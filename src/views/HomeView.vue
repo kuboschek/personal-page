@@ -64,6 +64,10 @@ main {
 
     .box {
       box-shadow: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 
