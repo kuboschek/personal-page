@@ -45,6 +45,10 @@ main {
     grid-template-columns: 1fr;
   }
 
+  @media print {
+    grid-template-columns: 1fr;
+  }
+
   > .box {
     margin: 0;
   }
