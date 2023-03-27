@@ -1,0 +1,7 @@
+:root {
+  @media (prefers-color-scheme: dark) {
+    color: hsl(0, 0%, 92%);
+    background: linear-gradient(to bottom right, hsl(270, 20%, 5%) 0%, hsl(270, 50%, 15%) 100%);
+    min-height: 100%;
+  }
+}

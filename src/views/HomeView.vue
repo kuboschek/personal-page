@@ -78,10 +78,6 @@ main {
     margin-left: 0;
     padding-left: 0;
 
-    a {
-      text-decoration: none;
-      color: initial;
-    }
     .box {
       flex-grow: 1;
       text-align: center;

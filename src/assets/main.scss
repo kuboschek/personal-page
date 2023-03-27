@@ -1,5 +1,6 @@
 @import "./base.css";
 @import "./variables.scss";
+@import "./dark.scss";
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -20,6 +21,8 @@ li {
   border-radius: 4rem;
   text-align: center;
   box-shadow: initial;
+  text-decoration: none;
+  color: inherit;
 
   transition: all 0.5s ease;
 
@@ -85,6 +88,11 @@ header {
   border-radius: .75rem;
   border: 1px solid #cccccc62;
   box-shadow: 0 0 10px #d8d8d880;
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid #ffffff1a;
+    box-shadow: 0 0 10px #ffffff1a;
+  }
 
   @media print {
     box-shadow: none;
