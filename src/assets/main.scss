@@ -60,6 +60,18 @@ nav {
 }
 
 
+
+@media print {
+  body {
+    font-size: 75%;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+
 header {
   display: flex;
   justify-content: space-between;
@@ -83,6 +95,11 @@ header {
   border-radius: .75rem;
   border: 1px solid #cccccc62;
   box-shadow: 0 0 1.5rem #d8d8d880;
+
+  @media print {
+    box-shadow: none;
+    border: none;
+  }
 
   .head {
     display: flex;
