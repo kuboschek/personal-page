@@ -125,7 +125,6 @@ const allItems: Item[] = [
 ];
 
 export const useItemsStore = defineStore("items", () => {
-  const items = ref<Item[]>(allItems);
   const filter = ref<Set<ItemCategory>>(new Set([]));
 
   const categories = computed(() => {
@@ -138,9 +137,9 @@ export const useItemsStore = defineStore("items", () => {
   });
 
   const filteredItems = computed(() => {
-    if (filter.value.size === 0) return items.value;
+    if (filter.value.size === 0) return allItems;
 
-    return items.value.filter((item) => {
+    return allItems.filter((item) => {
       return filter.value.has(item.category);
     });
   });

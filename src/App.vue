@@ -23,7 +23,7 @@ const year = new Date().getFullYear();
     </header>
 
     <nav class="space-sm">
-      <div class="box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
+      <div class="button box" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
     </nav>
 
     <RouterView />

@@ -3,9 +3,10 @@ import { ref } from "vue";
 import LifeItemVue from "@/components/LifeItem.vue";
 import { useItemsStore } from "@/stores/items";
 import { storeToRefs } from "pinia";
+import { useBuzzwordStore } from "@/stores/buzzwords";
 
 const itemStore = useItemsStore();
-const buzzwords = new Set(["Vue", "TypeScript", "Angular", "CI/CD", "TDD", "OpenAPI", "Django", "Vue"]);
+const buzzwordStore = useBuzzwordStore();
 </script>
 
 <template>
@@ -15,9 +16,7 @@ const buzzwords = new Set(["Vue", "TypeScript", "Angular", "CI/CD", "TDD", "Open
         <h3>Things I Know</h3>
       </div>
       <div class="buzzwords">
-        <span class="box space-sm" v-for="buzzword in buzzwords" :key="buzzword">
-          {{ buzzword }}
-        </span>
+        <a class="button box space-sm" v-for="buzzword in buzzwordStore.buzzwords" :key="buzzword.label" :href="buzzword.link" target="_blank" rel="noopener noreferrer">{{ buzzword.label }}</a>
       </div>
     </div>
     <div class="items">
@@ -44,13 +43,20 @@ main {
 
   .buzzwords {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     margin-left: 0;
     padding-left: 0;
 
-    .box {
-      display: block
+    a {
+      text-decoration: none;
+      color: initial;
     }
+    .box {
+      flex-grow: 1;
+      text-align: center;
+    }
+
   }
 
   .items {
