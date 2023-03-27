@@ -22,7 +22,7 @@ const buzzwords = new Set(["Vue", "TypeScript", "Angular", "CI/CD", "TDD", "Open
     </div>
     <div class="items">
       <div class="space-sm">
-        <h3>Things I Did</h3>
+        <h3>Things I Do</h3>
       </div>
       <LifeItemVue :item-data="item" v-for="item in itemStore.filteredItems" :key="item.title"/>
     </div>

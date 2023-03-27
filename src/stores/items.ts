@@ -23,7 +23,7 @@ export interface Item {
 const allItems: Item[] = [
   {
     title: "about:me",
-    description: "Highlights include building my own electric vehicle when I was 13, learning two new sports in 2022, and organising multiple events.\n\nFilter through with the bubbles above or just scroll around :) I'm open to new opportunities, so if you have a project or job, reach out to me. You'll find my contact details on the right.",
+    description: "I built my own electric vehicle when I was 13, learned two new sports in 2022, and organised multiple events.\n\nFilter through my life with the bubbles above or just scroll around :) I'm open to new opportunities, so if you have a project or job, reach out to me. You'll find my contact details at the top.",
     category: ItemCategory.Other,
   },
   {
@@ -53,9 +53,9 @@ const allItems: Item[] = [
     category: ItemCategory.Jobs,
   },
   {
-    title: "Eight Wheel Drive",
-    subtitle: "Inline Skating",
-    description: "Roll roll roll your skates gently down the road 😊 Another absolutely cool way of getting around (in summer).",
+    title: "Inline Skating",
+    subtitle: "Eight Wheel Drive",
+    description: "Roll roll roll your skates gently down the road 😊 Another cool way of getting around (in summer).",
     start: new Date("2021-06-01"),
     category: ItemCategory.Leisure,
   },
