@@ -13,7 +13,7 @@ const buzzwordStore = useBuzzwordStore();
   <main>
     <div>
       <div class="space-sm">
-        <h3>Things I Know</h3>
+        <h3>What I Know</h3>
       </div>
       <div class="buzzwords">
         <a class="button box space-sm" v-for="buzzword in buzzwordStore.buzzwords" :key="buzzword.label" :href="buzzword.link" target="_blank" rel="noopener noreferrer">{{ buzzword.label }}</a>
@@ -21,7 +21,7 @@ const buzzwordStore = useBuzzwordStore();
     </div>
     <div class="items">
       <div class="space-sm">
-        <h3>Things I Do</h3>
+        <h3>What I Do</h3>
       </div>
       <nav class="no-print">
         <div class="button box space-sm" @click="itemStore.setCategory(category.label, !category.active)" :class="{active: category.active}" v-for="category in itemStore.categories">{{  category.label }}</div>
