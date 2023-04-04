@@ -30,6 +30,7 @@ const allItems: Item[] = [
     title: "legartis.ai",
     subtitle: "Software Engineer",
     start: new Date("2022-07-01"),
+    end: new Date("2023-04-01"),
     description: "* Implementing user-defined fine-grained checks for contract texts using a combination of ML, rule-based, and regular expression-based text processing\n* Raising productivity while lowering cost by streamlining CI / CD",
     category: ItemCategory.Jobs,
   },
