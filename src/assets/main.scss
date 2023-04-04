@@ -11,10 +11,6 @@ li {
   padding-bottom: 1rem;
 }
 
-
-
-
-
 .button {
   padding: .5rem 1rem;
   margin-right: .5rem;
@@ -103,4 +99,31 @@ header {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: white;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 0%;
+  width: 100%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

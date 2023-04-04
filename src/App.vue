@@ -12,7 +12,7 @@ const year = new Date().getFullYear();
     <header class="box rainbow space">
       <div>
         <h1>Leo Kuboschek</h1>
-        <h2>Digital Architect</h2>
+        <h2 class="tooltip">Digital Architect<span class="tooltiptext space-sm">Software Architect, Engineer and Technology Consultant</span></h2>
       </div>
 
       <div class="contact">
