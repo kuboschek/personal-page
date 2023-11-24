@@ -1,0 +1,57 @@
+:root {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1;
+}
+
+body {
+    margin: 2.12cm auto 1.9cm auto;
+    max-width: 21cm; /* A4 minus page margins */
+    padding-left: 3cm;
+    padding-right: 3cm;
+}
+
+header {
+    font-size: 10pt;
+    text-align: center;
+}
+
+header b {
+    line-height: 1.1;
+}
+
+a {
+    color: unset;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+h1 {
+    margin-block-end: 4pt;
+}
+
+h2 {
+    font-size: 12pt;
+    margin-block-start: 13pt;
+    margin-block-end: 2pt;
+}
+
+h3 {
+    font-weight: initial;
+    font-size: 11pt;
+    margin-block-start: 12pt;
+    margin-block-end: 4pt;
+}
+
+ul {
+    padding-left: 6px;
+    box-sizing: content-box;
+}
+
+li {
+    list-style: '-';
+    margin-block-end: 8pt;
+    padding-left: calc(0.63cm - 6px);
+}
