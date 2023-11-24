@@ -1,0 +1,72 @@
+:root {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        background-color: #131516;
+        color: #d8d4cf;
+    }
+    
+    *::selection {
+        background-color: #004daa;
+        color: #e8e6e3;
+    }
+}
+
+
+body {
+    margin: 2.12cm auto 1.9cm auto;
+    max-width: 21cm; /* A4 minus page margins */
+    padding-left: 3cm;
+    padding-right: 3cm;
+}
+
+menu {
+    padding: 0;
+}
+
+header {
+    font-size: 10pt;
+    text-align: center;
+}
+
+header b {
+    line-height: 1.1;
+}
+
+a {
+    color: unset;
+}
+
+a.plain {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+h2 {
+    font-size: 12pt;
+    margin-block-start: 16pt;
+}
+
+h3 {
+    font-weight: initial;
+    font-size: 11pt;
+    margin-block-start: 16pt;
+}
+
+ul {
+    padding-left: 6px;
+    box-sizing: content-box;
+}
+
+li {
+    list-style: '-';
+    margin-block-end: 8pt;
+    padding-left: calc(0.63cm - 6px);
+}
